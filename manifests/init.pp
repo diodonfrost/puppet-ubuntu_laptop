@@ -1,8 +1,8 @@
 # Main class
-class ubuntu-laptop {
+class ubuntu_laptop {
 
   include ::snapd
-  include ubuntu-laptop::packages::install
+  include ubuntu_laptop::packages::install
 
   Class['snapd']
    -> Class['ubuntu-laptop::packages::install']

@@ -1,6 +1,6 @@
 # Install voice and text chat Discord.
 
-class ubuntu-laptop::packages::discord {
+class ubuntu_laptop::packages::discord {
 
   package {'dsicord':
     ensure   => installed,

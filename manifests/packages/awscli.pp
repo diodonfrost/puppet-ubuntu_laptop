@@ -1,6 +1,6 @@
 # Install awscli package
 
-class ubuntu-laptop::packages::awscli {
+class ubuntu_laptop::packages::awscli {
 
   package {'awscli':
     ensure   => installed,
