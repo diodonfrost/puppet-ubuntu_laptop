@@ -1,5 +1,5 @@
 # Install Spotify.
-class ubuntu-laptop::packages::spotify {
+class ubuntu_laptop::packages::spotify {
 
   package {'spotify':
     ensure   => installed,

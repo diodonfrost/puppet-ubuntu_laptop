@@ -1,6 +1,6 @@
 # Install ansible package
 
-class ubuntu-laptop::packages::ansible {
+class ubuntu_laptop::packages::ansible {
 
   package {'ansible':
     ensure   => installed,
