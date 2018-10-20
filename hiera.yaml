@@ -1,0 +1,20 @@
+ubuntu-laptop::packages::install::os_packages:
+  - cryptsetup
+  - ecryptfs-utils
+  - filezilla
+  - git
+  - golang
+  - keepassx
+  - libssl-dev
+  - nmap
+  - openssh-server
+  - openvpn
+  - python
+  - python-dev
+  - python-pip
+  - snapd
+  - terminator
+  - vim
+  - virtualbox
+  - vlc
+  - wireshark
