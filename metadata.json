@@ -17,6 +17,10 @@
     {
       "name": "kemra102/snapd",
       "version_requirement": "1.1.0"
+    },
+    {
+      "name": "puppetlabs/docker",
+      "version_requirement": "3.0.0"
     }
   ],
   "operatingsystem_support": [
