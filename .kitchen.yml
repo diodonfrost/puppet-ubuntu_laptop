@@ -1,0 +1,28 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: puppet_apply
+  manifests_path: test/fixtures/manifests
+  hiera_data_path: hieradata
+  hiera_deep_merge: true
+  puppet_verbose: true
+  idempotency_test: true
+
+platforms:
+  - name: ubuntu-18-04
+    driver_config:
+      box: bento/ubuntu-18.04
+  - name: ubuntu-16-04
+    driver_config:
+      box: bento/ubuntu-16.04
+
+# We use Inspec as testing framework
+verifier:
+  name: inspec
+  inspec_tests:
+    - path: spec/inspec
+
+suites:
+  - name: default
