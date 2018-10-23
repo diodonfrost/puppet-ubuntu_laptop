@@ -1,17 +1,22 @@
-# Install Google cloud repos and packages
+# Install Google cloud sdk and kubectl
 
 class ubuntu_laptop::packages::gcloud {
 
-  apt::source { 'google cloud repo':
-    comment  => 'google cloud repo',
-    location => 'http://packages.cloud.google.com/apt',
-    release  => "cloud-sdk-$fact['os']['distro']['codename']",
-    repos    => 'main',
-    key      => {
-      'source' => 'https://packages.cloud.google.com/apt/doc/apt-key.gpg',
-    },
-    include  => {
-      'deb' => true,
-    },
+  # Install google cloud sdk
+  package {'google-cloud-sdk':
+    ensure   => installed,
+    provider => snap,
+  }
+
+  # Install helm
+  package {'helm':
+    ensure   => installed,
+    provider => snap,
+  }
+
+  # Install kubectl
+  package {'kubectl':
+    ensure   => installed,
+    provider => snap,
   }
 }

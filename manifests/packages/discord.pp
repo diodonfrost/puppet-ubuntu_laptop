@@ -2,7 +2,8 @@
 
 class ubuntu_laptop::packages::discord {
 
-  package {'dsicord':
+  # Install Discord with snap
+  package {'discord':
     ensure   => installed,
     provider => snap,
   }
