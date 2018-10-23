@@ -1,4 +1,10 @@
-.git/
+.kitchen/
+.librarian/
+.tmp/
+logs/
+kitchen-vagrant/
+Puppetfile.lock
+default-*
 .*.sw[op]
 .metadata
 .yardoc

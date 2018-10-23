@@ -1,4 +1,4 @@
-ubuntu-laptop::packages::install::os_packages:
+ubuntu_laptop::packages::install::os_packages:
   - cryptsetup
   - ecryptfs-utils
   - filezilla
@@ -12,9 +12,9 @@ ubuntu-laptop::packages::install::os_packages:
   - python
   - python-dev
   - python-pip
-  - snapd
   - terminator
   - vim
   - virtualbox
   - vlc
+  - wget
   - wireshark
