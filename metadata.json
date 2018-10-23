@@ -1,5 +1,5 @@
 {
-  "name": "diodonfrost-ubuntulaptopmodule",
+  "name": "puppet-ubuntu_laptop",
   "version": "0.1.0",
   "author": "diodonfrost",
   "summary": "",
@@ -9,10 +9,6 @@
     {
       "name": "puppetlabs/stdlib",
       "version_requirement": ">= 4.13.1 < 6.0.0"
-    },
-    {
-      "name": "puppetlabs/apt",
-      "version_requirement": "6.1.1"
     },
     {
       "name": "kemra102/snapd",
@@ -27,7 +23,7 @@
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "9"
+        "9",
         "8"
       ]
     },
