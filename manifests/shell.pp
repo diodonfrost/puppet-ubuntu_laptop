@@ -9,11 +9,11 @@ class ubuntu_laptop::shell {
 
     # Download oh-my-zsh for each users
     exec { "Download oh-my-zsh for user ${user}":
-      command => 'git clone https://github.com/robbyrussell/oh-my-zsh ${home}/.oh-my-zsh',
+      command => "git clone https://github.com/robbyrussell/oh-my-zsh ${home}/.oh-my-zsh",
       path    => ['/usr/bin', '/usr/sbin', '/bin',],
       user    => $user,
       creates => "${home}/.oh-my-zsh",
-      require => [ Package['wget'], Package['git'] ],
+      require => Package['git'],
     }
 
     # Configure oh my zsh
