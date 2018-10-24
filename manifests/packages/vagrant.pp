@@ -1,5 +1,4 @@
 # Install provisionner Vagrant.
-
 class ubuntu_laptop::packages::vagrant {
 
   # Install Vagrant

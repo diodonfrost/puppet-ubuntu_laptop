@@ -18,3 +18,31 @@ ubuntu_laptop::packages::install::os_packages:
   - vlc
   - wget
   - wireshark
+
+ubuntu_laptop::packages::atom::atom_packages:
+  - atom-beautify
+  - atom-jinja2
+  - atom-material-ui
+  - busy-signal
+  - git-plus
+  - highlight-selected
+  - intentions
+  - language-ansible
+  - language-chef
+  - language-docker
+  - language-groovy
+  - language-puppet
+  - language-terraform
+  - linter
+  - linter-ansible-linting
+  - linter-docker
+  - linter-erb
+  - linter-golinter
+  - linter-markdown
+  - linter-puppet-lint
+  - linter-pylint
+  - linter-ruby
+  - linter-shellcheck
+  - linter-ui-default
+  - markdown-preview-plus
+  - minimap

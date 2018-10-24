@@ -1,5 +1,4 @@
 # Install awscli package
-
 class ubuntu_laptop::packages::awscli {
 
   # Install awscli with snap

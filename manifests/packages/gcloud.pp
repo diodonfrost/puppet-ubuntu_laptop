@@ -1,5 +1,4 @@
 # Install Google cloud sdk and kubectl
-
 class ubuntu_laptop::packages::gcloud {
 
   # Install google cloud sdk

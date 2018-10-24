@@ -1,8 +1,6 @@
 # Class for install packages
 class ubuntu_laptop::packages::install (
-  Array $os_packages = [ 'cryptsetup', 'ecryptfs-utils','filezilla','git','golang','keepassx',
-                      'libssl-dev','nmap','openssh-server','openvpn','python','python-dev',
-                      'python-pip','terminator','vim','virtualbox','vlc','wireshark','wget']
+  Array $os_packages = $::ubuntu_laptop::params::os_packages, 
 
   ) {
   # Install os packages
