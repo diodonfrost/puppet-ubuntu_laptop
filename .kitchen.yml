@@ -18,6 +18,7 @@ platforms:
   - name: "ubuntu-18.04-puppet"
     driver:
       instance_name: "ubuntu-18.04-puppet"
+      image: diodonfrost/ubuntu-18.04-puppet
       run_command: /sbin/init
       platform: ubuntu
       provision_command:
@@ -28,6 +29,7 @@ platforms:
   - name: "ubuntu-16.04-puppet"
     driver:
       instance_name: "ubuntu-16.04-puppet"
+      image: diodonfrost/ubuntu-16.04-puppet
       run_command: /sbin/init
       platform: ubuntu
       provision_command:
