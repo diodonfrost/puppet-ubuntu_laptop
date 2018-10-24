@@ -17,22 +17,17 @@ provisioner:
 platforms:
   - name: "ubuntu-18.04-puppet"
     driver:
+      instance_name: "ubuntu-18.04-puppet"
       run_command: /sbin/init
       platform: ubuntu
       provision_command:
         - apt-get install -y init
         - apt-get install -y fuse snapd snap-confine squashfuse sudo
         - dpkg-divert --local --rename --add /sbin/udevadm && ln -s /bin/true /sbin/udevadm
-  - name: "ubuntu-17.10-puppet"
-    driver:
-      run_command: /sbin/init
-      platform: ubuntu
-      provision_command:
-        - apt-get install -y init
-        - apt-get install -y fuse snapd snap-confine squashfuse sudo
-        - dpkg-divert --local --rename --add /sbin/udevadm && ln -s /bin/true /sbin/udevadm
+
   - name: "ubuntu-16.04-puppet"
     driver:
+      instance_name: "ubuntu-16.04-puppet"
       run_command: /sbin/init
       platform: ubuntu
       provision_command:
