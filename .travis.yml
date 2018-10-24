@@ -22,4 +22,4 @@ script:
   - 'kitchen test default-${distribution}-${number}-puppet'
 
   # Delete container
-  - 'sudo docker rm -f ${distribution}-${version}-puppet'
+  - 'sudo docker system prune -f -a'
