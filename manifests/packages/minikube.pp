@@ -6,6 +6,7 @@ class ubuntu_laptop::packages::minikube {
     command => 'wget -q http://storage.googleapis.com/minikube/releases/v0.30.0/minikube-linux-amd64 -O /usr/local/bin/minikube',
     path    => ['/usr/bin', '/usr/sbin',],
     creates => '/usr/local/bin/minikube',
+    require => Package['wget'],
   }
 
   # Set minikube executable for all users
