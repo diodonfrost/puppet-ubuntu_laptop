@@ -18,6 +18,7 @@ ubuntu_laptop::packages::install::os_packages:
   - vlc
   - wget
   - wireshark
+  - zsh
 
 ubuntu_laptop::packages::atom::atom_packages:
   - atom-beautify
