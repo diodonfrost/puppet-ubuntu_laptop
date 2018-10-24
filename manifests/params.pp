@@ -20,7 +20,8 @@ class ubuntu_laptop::params {
                   'virtualbox',
                   'vlc',
                   'wget',
-                  'wireshark']
+                  'wireshark',
+                  'zsh']
 
   # Default packages to install on atom with atom.io repository
   $atom_packages = ['atom-beautify',
