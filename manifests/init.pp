@@ -1,11 +1,9 @@
 # Main class
-class ubuntu_laptop {
+class ubuntu_laptop inherits ::ubuntu_laptop::params {
 
   include ::snapd
-  include apt
   include ubuntu_laptop::packages::install
 
   Class['snapd']
-  -> Class['apt']
   -> Class['ubuntu_laptop::packages::install']
 }
