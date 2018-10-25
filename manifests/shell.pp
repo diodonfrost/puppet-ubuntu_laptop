@@ -13,22 +13,22 @@ class ubuntu_laptop::shell {
       path    => ['/usr/bin', '/usr/sbin', '/bin',],
       user    => $user,
       creates => "${home}/.oh-my-zsh",
-      require => Package['git'],
+      require => [ Package['git'], Package['zsh'] ],
     }
 
     # Configure oh my zsh
-    file { "${home}/.oh-my-zsh/templates/zshrc.zsh-template":
-      ensure  => present,
-      target  => "${home}/.zshrc",
+    file { "${home}/.zshrc":
+      ensure  => file,
+      source  => "${home}/.oh-my-zsh/templates/zshrc.zsh-template",
       owner   => $user,
       group   => $user,
       require => Exec["Download oh-my-zsh for user ${user}"],
     }
 
-    exec { "change shell for user ${user}":
-      command => "chsh -s /usr/bin/zsh ${user}",
-      path    => ['/usr/bin', '/usr/sbin', '/bin',],
-      onlyif  => "getent passwd ${user} | grep bash",
+    # Change default user shell by zsh
+    user { $user:
+      ensure  => present,
+      shell   => '/usr/bin/zsh',
       require => Package['zsh'],
     }
   }
