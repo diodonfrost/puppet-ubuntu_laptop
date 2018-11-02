@@ -15,7 +15,7 @@ provisioner:
   require_chef_for_busser: false
 
 platforms:
-  - name: "ubuntu-18.04-puppet"
+  - name: "ubuntu-18-04"
     driver:
       instance_name: "ubuntu-18.04-puppet"
       image: diodonfrost/ubuntu-18.04-puppet
@@ -26,7 +26,7 @@ platforms:
         - apt-get install -y fuse snapd snap-confine squashfuse sudo
         - dpkg-divert --local --rename --add /sbin/udevadm && ln -s /bin/true /sbin/udevadm
 
-  - name: "ubuntu-16.04-puppet"
+  - name: "ubuntu-16-04"
     driver:
       instance_name: "ubuntu-16.04-puppet"
       image: diodonfrost/ubuntu-16.04-puppet
