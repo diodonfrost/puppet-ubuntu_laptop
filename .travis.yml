@@ -7,10 +7,10 @@ services:
 env:
   - distribution: ubuntu
     version: "18.04"
-    number: 1804
+    number: "18-04"
   - distribution: ubuntu
     version: "16.04"
-    number: 1604
+    number: "16-04"
 
 before_install:
   # Build docker container
@@ -19,7 +19,7 @@ before_install:
 script:
 
   # Launch kitchen build, puppet apply and tests
-  - 'kitchen test default-${distribution}-${number}-puppet'
+  - 'kitchen test default-${distribution}.${number}'
 
   # Delete container
   - 'sudo docker system prune -f -a'
