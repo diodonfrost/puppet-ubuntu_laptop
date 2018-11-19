@@ -57,6 +57,7 @@ The default ubuntu_laptop class install this packages:
 -   discord
 -   docker
 -   gcloud
+-   java
 -   minikube
 -   packer
 -   slack
