@@ -21,6 +21,10 @@
     {
       "name": "puppet/archive",
       "version_requirement": "3.2.1"
+    },
+    {
+      "name": "puppetlabs/java",
+      "version_requirement": "3.2.0"
     }
   ],
   "operatingsystem_support": [

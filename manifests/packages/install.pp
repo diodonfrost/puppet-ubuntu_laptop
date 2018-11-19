@@ -8,6 +8,11 @@ class ubuntu_laptop::packages::install (
     ensure => installed,
   }
 
+  # Install java virtual machine
+  class { 'java':
+    distribution => 'jre',
+  }
+
   include ubuntu_laptop::packages::ansible
   include ubuntu_laptop::packages::atom
   include ubuntu_laptop::packages::awscli
