@@ -17,6 +17,10 @@
     {
       "name": "puppetlabs/docker",
       "version_requirement": "3.0.0"
+    },
+    {
+      "name": "puppet/archive",
+      "version_requirement": "3.2.1"
     }
   ],
   "operatingsystem_support": [
