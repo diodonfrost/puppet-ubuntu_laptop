@@ -51,13 +51,14 @@ class { 'ubuntu_laptop' }
 ## Usage
 
 The default ubuntu_laptop class install this packages:
+-   ansible
 -   atom
 -   aws-cli
 -   discord
 -   docker
 -   gcloud
 -   minikube
--   puppet
+-   packer
 -   slack
 -   spotify
 -   tusk
