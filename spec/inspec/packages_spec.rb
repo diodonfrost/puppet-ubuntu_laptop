@@ -113,3 +113,23 @@ control 'install-10' do
     it { should be_executable }
   end
 end
+
+control 'install-11' do
+  impact 1.0
+  title 'Tusk install'
+  desc 'Tusk should be install'
+  describe file('/snap/bin/tusk') do
+    it { should exist }
+    it { should be_executable }
+  end
+end
+
+control 'install-12' do
+  impact 1.0
+  title 'Packer install'
+  desc 'Packer should be install'
+  describe file('/usr/local/bin/packer') do
+    it { should exist }
+    it { should be_executable }
+  end
+end
