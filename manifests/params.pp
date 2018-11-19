@@ -16,6 +16,7 @@ class ubuntu_laptop::params {
                   'python-dev',
                   'python-pip',
                   'terminator',
+                  'unzip',
                   'vim',
                   'virtualbox',
                   'vlc',
