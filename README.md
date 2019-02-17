@@ -62,6 +62,8 @@ The default ubuntu_laptop class install this packages:
 -   packer
 -   slack
 -   spotify
+-   terraform
+-   terragrunt
 -   tusk
 -   vagrant
 
