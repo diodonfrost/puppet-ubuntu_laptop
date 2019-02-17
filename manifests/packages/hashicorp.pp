@@ -32,9 +32,9 @@ class ubuntu_laptop::packages::hashicorp {
   }
 
   # Install Terragrunt
-  file {'/usr/local/bin/terragrunt':
-    ensure => present,
-    source => 'https://github.com/gruntwork-io/terragrunt/releases/download/v0.18.0/terragrunt_linux_amd64',
-    mode   => '0755',
+  exec {'terragrunt':
+    command => 'wget https://github.com/gruntwork-io/terragrunt/releases/download/v0.18.0/terragrunt_linux_amd64 -o /usr/local/bin/terragrunt && chmod +x /usr/local/bin/terragrunt',
+    path    => ['/usr/bin', '/usr/sbin', '/bin',],
+    creates => '/usr/local/bin/terragrunt',
   }
 }
