@@ -15,6 +15,7 @@ class ubuntu_laptop::params {
                   'python',
                   'python-dev',
                   'python-pip',
+                  'python3-flake8'
                   'terminator',
                   'unzip',
                   'vim',
@@ -41,6 +42,7 @@ class ubuntu_laptop::params {
                     'linter',
                     'linter-ansible-linting',
                     'linter-docker',
+                    'linter-flake8',
                     'linter-erb',
                     'linter-golinter',
                     'linter-markdown',
@@ -50,5 +52,6 @@ class ubuntu_laptop::params {
                     'linter-shellcheck',
                     'linter-ui-default',
                     'markdown-preview-plus',
-                    'minimap']
+                    'minimap',
+                    'Sublime-Style-Column-Selection']
 }
