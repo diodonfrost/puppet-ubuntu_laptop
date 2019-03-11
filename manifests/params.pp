@@ -15,7 +15,7 @@ class ubuntu_laptop::params {
                   'python',
                   'python-dev',
                   'python-pip',
-                  'python3-flake8'
+                  'python3-flake8',
                   'terminator',
                   'unzip',
                   'vim',
