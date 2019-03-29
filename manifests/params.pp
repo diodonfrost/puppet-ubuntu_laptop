@@ -25,8 +25,7 @@ class ubuntu_laptop::params {
                   'zsh']
 
   # Docker package requirements
-  $docker_packages_requirement = ['apt-transport-https',
-                                  'ca-certificates',
+  $docker_packages_requirement = ['ca-certificates',
                                   'curl',
                                   'software-properties-common']
 
@@ -61,11 +60,11 @@ class ubuntu_laptop::params {
                     'Sublime-Style-Column-Selection']
 
   # Default os packages to install on atom with atom.io repository
-  $atom_os_packages = [ 'puppet-lint',
-                        'shellcheck',
-                        'python3-flake8',
-                        'pylint']
+  $atom_os_packages = ['puppet-lint',
+                      'shellcheck',
+                      'python3-flake8',
+                      'pylint']
 
   # Default python pip packages to install on atom with atom.io repository
-  $atom_pip_packages = [ 'ansible-lint']
+  $atom_pip_packages = ['ansible-lint']
 }
