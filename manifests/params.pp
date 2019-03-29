@@ -8,6 +8,7 @@ class ubuntu_laptop::params {
                   'git',
                   'golang',
                   'keepassx',
+                  'libffi-dev',
                   'libssl-dev',
                   'nmap',
                   'openssh-server',
