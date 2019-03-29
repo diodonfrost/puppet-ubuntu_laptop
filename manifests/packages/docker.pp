@@ -1,7 +1,15 @@
 # Install docker and docker-compose
-class ubuntu_laptop::packages::docker {
+class ubuntu_laptop::packages::docker (
+  Array $docker_packages_requirement = $::ubuntu_laptop::params::docker_packages_requirement,
+
+  ){
 
   include 'docker'
+
+  # Install packages requirement for Docker
+  package {$docker_packages_requirement:
+    ensure => installed,
+  }
 
   # Download minikube executable
   exec {'retrieve docker-compose':

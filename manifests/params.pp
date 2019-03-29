@@ -14,8 +14,7 @@ class ubuntu_laptop::params {
                   'openvpn',
                   'python',
                   'python-dev',
-                  'python-pip',
-                  'python3-flake8'
+                  'python3-pip',
                   'terminator',
                   'unzip',
                   'vim',
@@ -25,7 +24,13 @@ class ubuntu_laptop::params {
                   'wireshark',
                   'zsh']
 
-  # Default packages to install on atom with atom.io repository
+  # Docker package requirements
+  $docker_packages_requirement = ['apt-transport-https',
+                                  'ca-certificates',
+                                  'curl',
+                                  'software-properties-common']
+
+  # Default atom packages to install on atom with atom.io repository
   $atom_packages = ['atom-beautify',
                     'atom-jinja2',
                     'atom-material-ui',
@@ -54,4 +59,13 @@ class ubuntu_laptop::params {
                     'markdown-preview-plus',
                     'minimap',
                     'Sublime-Style-Column-Selection']
+
+  # Default os packages to install on atom with atom.io repository
+  $atom_os_packages = [ 'puppet-lint',
+                        'shellcheck',
+                        'python3-flake8',
+                        'pylint']
+
+  # Default python pip packages to install on atom with atom.io repository
+  $atom_pip_packages = [ 'ansible-lint']
 }

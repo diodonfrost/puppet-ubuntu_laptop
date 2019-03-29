@@ -1,6 +1,8 @@
 # Install text editor atom
 class ubuntu_laptop::packages::atom (
-  Array $atom_packages = $::ubuntu_laptop::params::atom_packages,
+  Array $atom_packages     = $::ubuntu_laptop::params::atom_packages,
+  Array $atom_os_packages  = $::ubuntu_laptop::params::atom_os_packages,
+  Array $atom_pip_packages = $::ubuntu_laptop::params::atom_pip_packages,
 
   ){
   # Install  Atom with snap
@@ -19,5 +21,17 @@ class ubuntu_laptop::packages::atom (
         require => Package['atom'],
       }
     }
+  }
+
+  # Install atom packages with os package manager
+  package {$atom_os_packages:
+    ensure => installed,
+  }
+
+  # Install atom packages with python-pip
+  package {$atom_pip_packages:
+    ensure   => installed,
+    provider => 'pip3',
+    require  => Package['python3-pip'],
   }
 }
