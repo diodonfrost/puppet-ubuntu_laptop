@@ -1,7 +1,6 @@
 # puppet-ubuntu_laptop
 
 [![Gem Version](https://badge.fury.io/rb/test-kitchen.svg)](http://badge.fury.io/rb/test-kitchen)
-[![Build Status](https://travis-ci.org/diodonfrost/puppet-ubuntu_laptop.svg?branch=master)](https://travis-ci.org/diodonfrost/puppet-ubuntu_laptop)
 
 Welcome to your new module. A short overview of the generated parts can be found in the PDK documentation at <https://puppet.com/pdk/latest/pdk_generating_modules.html> .
 
